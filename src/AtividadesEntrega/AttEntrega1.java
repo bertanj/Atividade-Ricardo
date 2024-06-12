@@ -1,3 +1,5 @@
+package AtividadesEntrega;
+
 import java.util.Scanner;
 
 public class AttEntrega1 {
