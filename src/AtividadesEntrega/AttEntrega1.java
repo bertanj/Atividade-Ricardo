@@ -11,8 +11,10 @@ public class AttEntrega1 {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Digite a quantidade de vetores que o sistema terá:");
-        tamanho = scanner.nextInt();
+        do {
+            System.out.println("Digite a quantidade de vetores que o sistema terá:");
+            tamanho = scanner.nextInt();
+        }while(tamanho < 1);
 
         int [] vetor = new int[tamanho];
 
@@ -43,22 +45,14 @@ public class AttEntrega1 {
             }
         }
         System.out.println("O menor valor inserido nos vetores é: "+ menor);
-
-        System.out.println("Escolha um vetor para trocar o valor");
-        troca1 = scanner.nextInt();
-        System.out.println("Escolha outro vetor para trocar o valor");
-        troca2 = scanner.nextInt();
-
-
-        while(troca1 < 0 || troca1 > tamanho || troca2 < 0 || troca2 > tamanho){//verificação se os valores estão dentro do indice
-            System.out.println("Insira um valor entre 1 e "+tamanho);
+        do {
             System.out.println("Escolha um vetor para trocar o valor");
             troca1 = scanner.nextInt();
             System.out.println("Escolha outro vetor para trocar o valor");
             troca2 = scanner.nextInt();
-            troca1--;
-            troca2--;
-        }
+        }while(troca1 <1 || troca1 > tamanho || troca2 <1 || troca2 > tamanho );
+
+
         troca1--;//deixando o valor dentro do indice 0 e tamanho
         troca2--;
         aux = troca1;
