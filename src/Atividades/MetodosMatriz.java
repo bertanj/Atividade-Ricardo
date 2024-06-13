@@ -66,7 +66,7 @@ public class MetodosMatriz {
         }
     }
 
-    public static void quantidadeParImpar(int [] dimensao, int [][] matriz){
+    public static void contarParImpar(int [] dimensao, int [][] matriz){
         int contadorp = 0, contadori = 0;
 
         for (int i = 0; i < dimensao[0]; i++) {
@@ -92,7 +92,7 @@ public class MetodosMatriz {
         System.out.println("A soma dos valores da matriz tem o valor de: " + soma);
     }
 
-    public static void multiplicarMatrizes(int []dimensao, int [][] matriz){
+    public static void multiplicarMatriz(int []dimensao, int [][] matriz){
         int multiplicacao = 1;
 
         for (int i = 0; i < dimensao[0]; i++) {//representa a linha da matriz
@@ -141,11 +141,10 @@ public class MetodosMatriz {
         preencherMatriz(dimensao, matriz);
         exibirMatriz(dimensao,matriz);
         buscarValor(dimensao, matriz);
-        quantidadeParImpar(dimensao,matriz);
+        contarParImpar(dimensao,matriz);
         somarMatriz(dimensao, matriz);
-        multiplicarMatrizes(dimensao, matriz);
+        multiplicarMatriz(dimensao, matriz);
         exibirParMatriz(dimensao, matriz);
         exibirImparMatriz(dimensao, matriz);
-
     }
 }
